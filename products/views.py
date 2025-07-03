@@ -20,5 +20,6 @@ def post(request):
             instance.author = request.user
             instance.save()
             return redirect("products:list")
-    form = forms.PostProduct()
+    else:
+        form = forms.PostProduct()
     return render(request, "products/post.html", {'form':form})

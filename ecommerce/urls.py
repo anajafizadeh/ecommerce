@@ -10,6 +10,7 @@ from products.views import products_list
 urlpatterns = [
     path("admin/", admin.site.urls),
     path("products/", include('products.urls')),
+    path("accounts/", include('accounts.urls')),
     path("", products_list),
 ]
 
