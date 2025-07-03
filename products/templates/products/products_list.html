@@ -8,7 +8,7 @@ Products
     {% for product in products %}
     <div class="product">
         <h2>
-            {{product.name}}
+            <a href="{% url 'products:details' slug=product.slug%}">{{product.name}}</a>
         </h2>
         <p>
             {{product.price}}
