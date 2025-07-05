@@ -69,3 +69,43 @@ nav button {
     border: 0;
     font-size: 1em;
 }
+
+.site-form {
+    margin-top: 10px;
+    padding: 20px;
+}
+
+.site-form input, .site-form textarea{
+    display: block;
+    margin: 5px 0 20px 0;
+    padding: 10px;
+}
+
+.site-form input[type='submit']{
+    border: 0;
+    border-radius: 20px;
+    color: #fff;
+    font-size: 1em;
+    background-color: rgba(128, 0, 128, 0.8);
+    padding: 15px;
+    cursor: pointer;
+}
+
+.helptext, .helptext ul{
+    margin: 0 auto 20px;
+    font-size: 0.9em;
+    display:block;
+}
+
+.errorlist li{
+    padding: 10px;
+    list-style-type: none;
+    background-color: #ff5722;
+    border-radius: 10px;
+    margin: 10px 0;
+    display: inline-block;
+}
+
+.errorlist{
+    padding: 0;
+}
