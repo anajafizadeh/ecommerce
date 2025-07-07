@@ -4,8 +4,26 @@ Shopping Cart
 {%endblock%}
 
 {% block content %}
-{% for item in items %}
-<h1>item: {{ item.product.name }}</h1>
-<p>quantity: {{ item.quantity }}</p>
-{%endfor%}
+<table class="site-table">
+    <thead>
+        <tr>
+            <th>Item</th>
+            <th>Quantity</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for item in items %}
+            <tr>
+                <td>{{ item.product.name }}</td>
+                <td>{{ item.quantity }}</td>
+                <td>{{ item.product.price }}</td>
+            </tr>
+        {%endfor%}
+        <tr>
+            <th>Total</th>
+            <td>{{ price }}</td>
+        </tr>
+    </tbody>
+</table>
 {%endblock%}

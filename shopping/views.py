@@ -22,5 +22,7 @@ def add_to_cart(request, product_id):
 
 def cart_view(request):
     items = models.CartItem.objects.all().order_by('-date_added')
-    args = {'items':items}
-    return render(request, "shopping/cart.html", args)
+    total = 0
+    for item in items:
+        total += item.product.price * item.quantity
+    return render(request, "shopping/cart.html", {'items':items, 'price': total})
